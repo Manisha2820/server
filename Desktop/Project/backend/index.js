@@ -22,6 +22,6 @@ app.get("/", (req, res) => {
 });
 app.use("/api/auth", require("./Routes/Auth"));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`);
 });
